@@ -11,7 +11,7 @@ namespace Programacionll_ProyectoVS.AccesoDatos
     public class Conexion
     {
         //conection string
-        private SqlConnection ConectionDB = new SqlConnection("Server=CarlosZ\\SQLEXPRESS; Database=CursosDB; Integrated Security= true; Trusted_Connection=True");
+        private SqlConnection ConectionDB = new SqlConnection("Server=CARLOSZ; Database=CursosDB; Integrated Security= true; Trusted_Connection=True");
         
         //Abrir la conexion
         public SqlConnection abrirConexion()

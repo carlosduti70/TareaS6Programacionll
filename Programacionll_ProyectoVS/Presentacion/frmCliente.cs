@@ -22,19 +22,10 @@ namespace Programacionll_ProyectoVS.Presentacion
             clienteLogica = new ClienteLogica();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmCliente_Load(object sender, EventArgs e)
         {
             ListarClientes();
+            limpiarCampos();
 
         }
 
@@ -44,10 +35,10 @@ namespace Programacionll_ProyectoVS.Presentacion
             {
                 nuevoCliente = new Cliente();
 
-                nuevoCliente.nombre = textNombre.Text;
-                nuevoCliente.apellido = textApellido.Text;
-                nuevoCliente.direccion = textDireccion.Text;
-                nuevoCliente.email = textEmail.Text;
+                nuevoCliente.nombre = txtNombre.Text;
+                nuevoCliente.apellido = txtApellido.Text;
+                nuevoCliente.direccion = txtDireccion.Text;
+                nuevoCliente.email = txtEmail.Text;
                 if (chkEstado.Checked)
                     nuevoCliente.estado = 1; //activo
                 else nuevoCliente.estado = 0; //inactivo
@@ -69,16 +60,28 @@ namespace Programacionll_ProyectoVS.Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (IngresarCliente()) {
+            if (IngresarCliente())
+            {
                 MessageBox.Show("Cliente ingresado con exito");
                 ListarClientes();
-            } else
+                limpiarCampos();
+            }
+            else
             { MessageBox.Show("Cliente no ingresado"); }
 
         }
-
         private void limpiarCampos()
         {
-            textApellido = " "; 
+            txtApellido.Text = "";
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
+            txtEmail.Text = "";
+            chkEstado.Checked = false;
         }
-    } }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+}

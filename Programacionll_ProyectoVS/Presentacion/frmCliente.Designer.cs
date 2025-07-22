@@ -34,9 +34,9 @@
             label5 = new Label();
             label6 = new Label();
             txtNombre = new TextBox();
-            textApellido = new TextBox();
-            textDireccion = new TextBox();
-            textEmail = new TextBox();
+            txtApellido = new TextBox();
+            txtDireccion = new TextBox();
+            txtEmail = new TextBox();
             chkEstado = new CheckBox();
             btnAceptar = new Button();
             button2btnCancelar = new Button();
@@ -102,30 +102,31 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(232, 23);
             txtNombre.TabIndex = 7;
+            //txtNombre.TextChanged += txtNombre_TextChanged;
             // 
-            // textApellido
+            // txtApellido
             // 
-            textApellido.Location = new Point(81, 72);
-            textApellido.Margin = new Padding(3, 2, 3, 2);
-            textApellido.Name = "textApellido";
-            textApellido.Size = new Size(232, 23);
-            textApellido.TabIndex = 8;
+            txtApellido.Location = new Point(81, 72);
+            txtApellido.Margin = new Padding(3, 2, 3, 2);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(232, 23);
+            txtApellido.TabIndex = 8;
             // 
-            // textDireccion
+            // txtDireccion
             // 
-            textDireccion.Location = new Point(81, 101);
-            textDireccion.Margin = new Padding(3, 2, 3, 2);
-            textDireccion.Name = "textDireccion";
-            textDireccion.Size = new Size(232, 23);
-            textDireccion.TabIndex = 9;
+            txtDireccion.Location = new Point(81, 101);
+            txtDireccion.Margin = new Padding(3, 2, 3, 2);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(232, 23);
+            txtDireccion.TabIndex = 9;
             // 
-            // textEmail
+            // txtEmail
             // 
-            textEmail.Location = new Point(81, 127);
-            textEmail.Margin = new Padding(3, 2, 3, 2);
-            textEmail.Name = "textEmail";
-            textEmail.Size = new Size(232, 23);
-            textEmail.TabIndex = 10;
+            txtEmail.Location = new Point(81, 127);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(232, 23);
+            txtEmail.TabIndex = 10;
             // 
             // chkEstado
             // 
@@ -137,7 +138,7 @@
             chkEstado.TabIndex = 11;
             chkEstado.Text = "Activo";
             chkEstado.UseVisualStyleBackColor = true;
-            chkEstado.CheckedChanged += checkBox1_CheckedChanged;
+            //chkEstado.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // btnAceptar
             // 
@@ -163,9 +164,9 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(chkEstado);
-            groupBox1.Controls.Add(textEmail);
-            groupBox1.Controls.Add(textDireccion);
-            groupBox1.Controls.Add(textApellido);
+            groupBox1.Controls.Add(txtEmail);
+            groupBox1.Controls.Add(txtDireccion);
+            groupBox1.Controls.Add(txtApellido);
             groupBox1.Controls.Add(txtNombre);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
@@ -202,6 +203,7 @@
             dgvClientes.RowHeadersWidth = 51;
             dgvClientes.Size = new Size(653, 217);
             dgvClientes.TabIndex = 16;
+            dgvClientes.CellContentClick += dgvClientes_CellContentClick;
             // 
             // groupBox3
             // 
@@ -244,14 +246,13 @@
         private Label label5;
         private Label label6;
         private TextBox txtNombre;
-        private TextBox textNombre;
-        private TextBox textApellido;
-        private TextBox textDireccion;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textEmail;
+        private TextBox txtApellido;
+        private TextBox txtDireccion;
+        private TextBox txtBox1;
+        private TextBox txtBox2;
+        private TextBox txtBox3;
+        private TextBox txtBox4;
+        private TextBox txtEmail;
         private CheckBox chkEstado;
         private Button btnAceptar;
         private Button button2btnCancelar;

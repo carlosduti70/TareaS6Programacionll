@@ -8,9 +8,9 @@ namespace Programacionll_ProyectoVS.AccesoDatos.Entidades
 {
     public class curso
     {
-        private int idCurso { get; set; }
-        private string nombre { get; set; }
-        private string descripcion { get; set; }
-        private int estado { get; set; }
+        public int idCurso { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public int estado { get; set; }
     }
 }
