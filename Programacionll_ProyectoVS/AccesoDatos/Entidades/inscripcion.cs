@@ -8,8 +8,13 @@ namespace Programacionll_ProyectoVS.AccesoDatos.Entidades
 {
     public class inscripcion
     {
-        private int idInscripcion {  get; set; }
-        private DateTime fechaInscripcion { get; set; }
-        private int estado {  get; set; }
+        public int idInscripcion {  get; set; }
+        public DateTime fechaInscripcion { get; set; }
+        public int estado {  get; set; }
+
+
+        //llaves foraneas
+        public int? FK_Curso { get; set; }
+        public int? FK_Cliente { get; set; }
     }
 }

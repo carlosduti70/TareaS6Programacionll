@@ -35,6 +35,7 @@
             newToolStripMenuItem = new ToolStripMenuItem();
             clienteToolStripMenuItem = new ToolStripMenuItem();
             cursoToolStripMenuItem = new ToolStripMenuItem();
+            inscripcionToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
@@ -93,7 +94,7 @@
             // 
             // newToolStripMenuItem
             // 
-            newToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clienteToolStripMenuItem, cursoToolStripMenuItem });
+            newToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clienteToolStripMenuItem, cursoToolStripMenuItem, inscripcionToolStripMenuItem });
             newToolStripMenuItem.Image = (Image)resources.GetObject("newToolStripMenuItem.Image");
             newToolStripMenuItem.ImageTransparentColor = Color.Black;
             newToolStripMenuItem.Name = "newToolStripMenuItem";
@@ -116,6 +117,14 @@
             cursoToolStripMenuItem.Size = new Size(180, 22);
             cursoToolStripMenuItem.Text = "Curso";
             cursoToolStripMenuItem.Click += cursoToolStripMenuItem_Click;
+            // 
+            // inscripcionToolStripMenuItem
+            // 
+            inscripcionToolStripMenuItem.Name = "inscripcionToolStripMenuItem";
+            inscripcionToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.A;
+            inscripcionToolStripMenuItem.Size = new Size(180, 22);
+            inscripcionToolStripMenuItem.Text = "Inscripcion";
+            inscripcionToolStripMenuItem.Click += inscripcionToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
@@ -434,6 +443,7 @@
         private System.Windows.Forms.ToolTip toolTip;
         private ToolStripMenuItem clienteToolStripMenuItem;
         private ToolStripMenuItem cursoToolStripMenuItem;
+        private ToolStripMenuItem inscripcionToolStripMenuItem;
     }
 }
 

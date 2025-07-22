@@ -20,6 +20,7 @@ namespace Programacionll_ProyectoVS.Presentacion
         {
             InitializeComponent();
             clienteLogica = new ClienteLogica();
+            ListarClientes();
         }
 
         private void frmCliente_Load(object sender, EventArgs e)

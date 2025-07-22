@@ -20,6 +20,7 @@ namespace Programacionll_ProyectoVS.Presentacion
         {
             InitializeComponent();
             cursoLogica = new CursoLogica();
+            ListarCursos();
         }
 
         private void frmCliente_Load(object sender, EventArgs e)
@@ -77,6 +78,11 @@ namespace Programacionll_ProyectoVS.Presentacion
         }
 
         private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

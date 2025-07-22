@@ -111,8 +111,15 @@ namespace Programacionll_ProyectoVS.Presentacion
         private void cursoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCurso frmCurso = new frmCurso();
-            frmCurso.MdiParent = this; 
+            frmCurso.MdiParent = this;
             frmCurso.Show();
+        }
+
+        private void inscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inscripcion inscripcion = new Inscripcion();
+            inscripcion.MdiParent = this;
+            inscripcion.Show();
         }
     }
 }

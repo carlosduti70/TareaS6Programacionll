@@ -1,6 +1,6 @@
 ﻿namespace Programacionll_ProyectoVS.Presentacion
 {
-    partial class frmCurso
+    partial class Inscripcion
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,10 @@
             button2btnCancelar = new Button();
             btnAceptar = new Button();
             groupBox1 = new GroupBox();
+            cmbCliente = new ComboBox();
+            cmbCurso = new ComboBox();
             label1 = new Label();
             chkEstado = new CheckBox();
-            txtDescripcion = new TextBox();
-            txtNombre = new TextBox();
             label6 = new Label();
             label4 = new Label();
             label2 = new Label();
@@ -50,12 +50,12 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(dgvCursos);
-            groupBox3.Location = new Point(12, 194);
+            groupBox3.Location = new Point(66, 196);
             groupBox3.Margin = new Padding(3, 2, 3, 2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 2, 3, 2);
             groupBox3.Size = new Size(669, 241);
-            groupBox3.TabIndex = 20;
+            groupBox3.TabIndex = 23;
             groupBox3.TabStop = false;
             groupBox3.Text = "Resultados";
             // 
@@ -74,12 +74,12 @@
             // 
             groupBox2.Controls.Add(button2btnCancelar);
             groupBox2.Controls.Add(btnAceptar);
-            groupBox2.Location = new Point(485, 134);
+            groupBox2.Location = new Point(539, 136);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
             groupBox2.Size = new Size(196, 56);
-            groupBox2.TabIndex = 19;
+            groupBox2.TabIndex = 22;
             groupBox2.TabStop = false;
             // 
             // button2btnCancelar
@@ -101,39 +101,54 @@
             btnAceptar.TabIndex = 12;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click_1;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cmbCliente);
+            groupBox1.Controls.Add(cmbCurso);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(chkEstado);
-            groupBox1.Controls.Add(txtDescripcion);
-            groupBox1.Controls.Add(txtNombre);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(12, 11);
+            groupBox1.Location = new Point(66, 13);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(328, 111);
-            groupBox1.TabIndex = 18;
+            groupBox1.Size = new Size(226, 124);
+            groupBox1.TabIndex = 21;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // cmbCliente
+            // 
+            cmbCliente.FormattingEnabled = true;
+            cmbCliente.Location = new Point(81, 82);
+            cmbCliente.Name = "cmbCliente";
+            cmbCliente.Size = new Size(121, 23);
+            cmbCliente.TabIndex = 25;
+            // 
+            // cmbCurso
+            // 
+            cmbCurso.FormattingEnabled = true;
+            cmbCurso.Location = new Point(81, 46);
+            cmbCurso.Name = "cmbCurso";
+            cmbCurso.Size = new Size(121, 23);
+            cmbCurso.TabIndex = 24;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 75);
+            label1.Location = new Point(10, 90);
             label1.Name = "label1";
-            label1.Size = new Size(69, 15);
+            label1.Size = new Size(44, 15);
             label1.TabIndex = 13;
-            label1.Text = "Descripcion";
+            label1.Text = "Cliente";
             // 
             // chkEstado
             // 
             chkEstado.AutoSize = true;
-            chkEstado.Location = new Point(245, 19);
+            chkEstado.Location = new Point(79, 16);
             chkEstado.Margin = new Padding(3, 2, 3, 2);
             chkEstado.Name = "chkEstado";
             chkEstado.Size = new Size(60, 19);
@@ -141,26 +156,10 @@
             chkEstado.Text = "Activo";
             chkEstado.UseVisualStyleBackColor = true;
             // 
-            // txtDescripcion
-            // 
-            txtDescripcion.Location = new Point(81, 72);
-            txtDescripcion.Margin = new Padding(3, 2, 3, 2);
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(232, 23);
-            txtDescripcion.TabIndex = 8;
-            // 
-            // txtNombre
-            // 
-            txtNombre.Location = new Point(81, 46);
-            txtNombre.Margin = new Padding(3, 2, 3, 2);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(232, 23);
-            txtNombre.TabIndex = 7;
-            // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(197, 21);
+            label6.Location = new Point(12, 20);
             label6.Name = "label6";
             label6.Size = new Size(42, 15);
             label6.TabIndex = 5;
@@ -172,18 +171,17 @@
             label4.Name = "label4";
             label4.Size = new Size(100, 23);
             label4.TabIndex = 12;
-            label4.Text = "Seleccione curso";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(10, 45);
+            label2.Location = new Point(10, 49);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(38, 15);
             label2.TabIndex = 1;
-            label2.Text = "Nombre";
+            label2.Text = "Curso";
             // 
-            // frmCurso
+            // Inscripcion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -191,8 +189,9 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Name = "frmCurso";
-            Text = "Insertar Curso";
+            Name = "Inscripcion";
+            Text = "frmInscripcion";
+            Load += Inscripcion_Load;
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvCursos).EndInit();
             groupBox2.ResumeLayout(false);
@@ -209,16 +208,12 @@
         private Button button2btnCancelar;
         private Button btnAceptar;
         private GroupBox groupBox1;
-        private CheckBox chkEstado;
-        private TextBox txtEmail;
-        private TextBox txtDireccion;
-        private TextBox txtDescripcion;
-        private TextBox txtNombre;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
         private Label label1;
+        private CheckBox chkEstado;
+        private Label label6;
+        private Label label4;
+        private Label label2;
+        private ComboBox cmbCliente;
+        private ComboBox cmbCurso;
     }
 }
